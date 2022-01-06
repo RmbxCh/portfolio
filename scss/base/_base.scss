@@ -1,0 +1,59 @@
+/* BASES */
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    background-color: map-get($color-bg, main);
+    font-family: map-get($font, main);
+    color: map-get($color-font, main);
+}
+
+h1, h2, h3, h4{
+    font-family: map-get($font, second);
+}
+
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0.15rem 0.05rem map-get($color-font, details));
+}
+
+a{
+    color: map-get($color-font, main);
+    text-decoration: none;
+}
+
+i{
+    font-style: normal;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(4, 58, 41, 0.7);
+    border: 0;
+    border-radius: 999rem;
+}

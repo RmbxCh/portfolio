@@ -1,0 +1,138 @@
+/* MAIN HEADER */
+.l-header-main{
+    z-index: 100;
+    position: fixed;
+    inset: 0;
+    padding: 2.5rem 0;
+    height: 2.5rem;
+    background-color: map-get($color-bg, main);
+}
+
+/* Menu responsive */
+.l-main-nav-ham{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+.l-main-nav-ham.active{
+    .l-main-nav-line:nth-child(1){
+        top: 0.8rem;
+        transform: rotate(135deg);
+    }
+    .l-main-nav-line:nth-child(2){
+        opacity: 0;
+    }
+    .l-main-nav-line:nth-child(3){
+        top: 0.8rem;
+        transform: rotate(-135deg);
+    }
+}
+
+.l-main-nav-line{
+    position: absolute;
+    width: 100%;
+    height: 0.35rem;
+    background-color: map-get($color-bg, deco);
+    border-radius: 0.2rem;
+    transition: all 0.4s ease-in-out;
+    
+    &:nth-child(1){
+        top: 0;
+    }
+    
+    &:nth-child(2){
+        top: 0.8rem;
+    }
+    
+    &:nth-child(3){
+        top: 1.6rem;
+    }
+}
+
+.l-main-nav{
+    z-index: 5;
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: map-get($color-bg, main);
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    list-style: none;
+    transition: right 0.5s ease-in-out;
+
+    a{
+        position: relative;
+        padding: 0 0 1rem 0;
+
+        &::before{
+            content: attr(data-item);
+            position: absolute;
+            inset: 0;
+            width: 0;
+            color: map-get($color-font, details);
+            overflow: hidden;
+            transition: all 0.7s ease-in-out;
+        }
+
+        &:hover::before{
+            width: 100%;
+            transition: all 0.7s ease-in-out;
+        }
+    }
+
+    li{
+        margin-bottom: 2rem;
+    }
+}
+
+.l-main-nav.active-menu{
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    height: 100vh;
+    background-color: map-get($color-bg, main);
+    transition: right 0.8s ease-in-out;
+}
+
+@media screen and (min-width: map-get($breakpoint, desktop)){
+    .l-header-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-bottom: 5rem;
+    }
+
+    .l-main-nav-ham{
+        display: none;
+    }
+
+    .l-main-nav{
+        align-items: center;
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 3rem;
+        line-height: 3rem;
+
+        li{
+            display: inline-block;
+            margin: 0 2rem;
+        }
+
+        a{
+            padding: 0 0 1rem 0;
+
+            &::before{
+                top: -0.9rem;
+            }
+        }
+    }
+}

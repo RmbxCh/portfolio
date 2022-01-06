@@ -1,0 +1,207 @@
+/* Section PORTFOLIO */
+#portfolio{
+    margin: 4rem 0;
+    
+    h1{
+        margin-bottom: 2rem;
+    }
+}
+
+.m-portfolio-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-portfolio-card{
+    position: relative;
+    margin: 2rem 1rem 5rem 1rem;
+    width: 18rem;
+    height: 20rem;
+
+    &:active &-back, &:hover &-back{
+        transform: rotateY(0);
+    }
+    
+    &:active &-front, &:hover &-front{
+        transform: rotateY(-180deg);
+    }
+}
+
+.m-portfolio-card-front, .m-portfolio-card-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 4rem 0.5rem rgba(200, 195, 195, 0.7);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+.m-portfolio-card-front{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    i{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+        color: map-get($color-font, details);
+        font-size: 3rem;
+    }
+}
+
+.card-kreo{
+    background-image: 
+        linear-gradient(map-get($gradient-card, dark)), 
+        url('../img/kreo.png');
+}
+    
+.card-isl{
+    background-image: 
+        linear-gradient(map-get($gradient-card, light)),
+        url('../img/islweb.png');
+}
+
+.card-bulafit{
+    background-image: 
+        linear-gradient(map-get($gradient-card, light)), 
+        url('../img/bulafit.png');
+}
+    
+.card-portfo{
+    background-image: 
+        linear-gradient(map-get($gradient-card, light)), 
+        url('../img/portfolio.png');
+}
+
+.m-portfolio-card-back{
+    padding: 2rem;
+    background-color: map-get($color-bg, second);
+    color: map-get($color-font, second);
+    font-size: 0.8rem;
+    transform: rotateY(180deg);
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin-bottom: 0.5rem;
+        line-height: 1.3rem;
+    }
+    
+    a{
+        color: map-get($color-font, second);
+    }
+}
+
+.m-portfolio-card-demo{
+    display: none;
+}
+
+.m-portfolio-card-bottom{
+    position: absolute;
+    bottom: -2rem;
+    width: 100%;
+    text-align: center;
+    
+    a{
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+
+    i{
+        padding: 0 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, tab)){
+    .m-portfolio-container{
+        flex-direction: row;
+    }
+
+    .m-portfolio-card{
+        width: 25%;
+        height: 25rem;
+        transition: width 0.3s ease-in-out;
+
+        &:active, &:hover{
+            width: 100%;
+        }
+    }
+
+    .m-portfolio-card-front, .m-portfolio-card-back{
+        height: 25rem;
+    }
+
+    .m-portfolio-card-bottom{
+        bottom: -3rem;
+        font-size: 0.8rem;
+        
+        a{
+            margin: 0.2rem
+        }
+        i{
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, desktop)){
+    .m-portfolio-container{
+        flex-direction: row;
+    }
+
+    .m-portfolio-card{
+        width: 25%;
+        height: 30rem;
+        transition: width 0.3s ease-in-out;
+
+        &:active, &:hover{
+            width: 150%;
+        }
+    }
+
+    .m-portfolio-card-front, .m-portfolio-card-back{
+        height: 30rem;
+    }
+
+    .m-portfolio-card-back{
+        font-size: 1rem;
+
+        h2{
+            margin-bottom: 2rem;
+        }
+
+        p{
+            margin-bottom: 0.6rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    i.fa-hand-point-up{
+        display: none;
+    }
+
+    .m-portfolio-card-demo{
+        display: block;
+
+        i{
+            margin: 1rem 0.6rem;
+            color: map-get($color-font, second);
+        }
+    }
+
+    .m-portfolio-card-bottom{
+        display: none;
+    }
+}

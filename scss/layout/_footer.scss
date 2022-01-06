@@ -1,0 +1,55 @@
+/* MAIN FOOTER */
+.l-main-footer{
+    padding: 0.7rem 0 0.5rem 0;
+    border-top: 0.05rem dotted rgba(241, 241, 241, 0.5);
+    background-color: map-get($color-bg, second);
+
+    p{
+        color: map-get($color-font, second);
+        font-size: 0.8rem;
+        text-align: center;
+        opacity: 0.5;
+    }
+
+    a{
+        color: map-get($color-font, second);
+        text-decoration: underline;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.nav-to-top{
+    display: none;
+}
+
+@media screen and (min-width: map-get($breakpoint, desktop)) {
+    .nav-to-top{
+        display: inline-block;
+        position: fixed;
+        bottom: 12.5rem;
+        right: 4.5rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: rgba(204, 162, 58, 0.2);
+        text-align: center;
+        cursor: pointer;
+    
+        a{
+            font-size: 2rem;
+            animation: navanimation 1s infinite alternate;
+
+            @keyframes navanimation {
+                from{filter: drop-shadow(0 0.15rem 0.05rem map-get($color-font, details))}
+                to{filter: none}
+            }
+        }
+        i{
+            padding-top: 0.4rem;
+        }
+
+    }
+}

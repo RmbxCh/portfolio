@@ -1,0 +1,133 @@
+/* Section banner */
+#banner .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.m-banner-rmbx{
+    position: relative;
+    margin: 6rem 0 2.5rem 0;
+    width: max-content;
+    background-color: map-get($color-bg, main);
+    font-family: map-get($font, second), sans-serif;
+    color: map-get($color-font, main);
+    font-size: 0;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+
+    span{
+        position: relative;
+        display: inline-block;
+
+        i{
+            display: block;
+            font-size: 6rem;
+            line-height: 0.3rem;
+            transition: transform $animationRmbx;
+        }
+
+        i:last-child{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate3d(0, 2.5rem, 0) scaleY(0) skewX(-20deg);
+        }
+
+        @for $i from 1 through 4{
+            &:nth-child(#{$i}){
+                i{
+                    transition-delay: calc(#{$delay} * #{3 - $i});
+                }
+            }
+        }
+    }
+
+    &:hover{
+        span{
+            i:first-child{
+                transform: translate3d(0, -3.5rem, 0) scaleY(0) skewX(10deg);
+            }
+
+            i:last-child{
+                transform: translate3d(0, 0, 0) scaleY(1) skewX(0deg);
+            }
+
+            @for $i from 1 through 4{
+                &:nth-child(#{$i}){
+                    i{
+                        transition-delay: calc(#{$delay} * #{$i});
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m-banner-rmbx::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -0.6rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: map-get($color-bg, deco);
+    border-radius: 50%;
+}
+
+@media screen and (min-width: map-get($breakpoint, tab)){
+    #banner .wrap{
+        margin-top: 7rem;
+    }
+    
+    .m-banner-rmbx::after{
+        bottom: -0.1rem;
+        right: -1.8rem;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .m-banner-rmbx span i{
+        font-size: 8.5rem;
+    }
+
+    .m-banner-rmbx span i:last-child{
+        transform: translate3d(0, 4rem, 0) scaleY(0) skewX(-20deg);
+    }
+
+    .m-banner-rmbx:hover span i:first-child{
+        transform: translate3d(0, -5.5rem, 0) scaleY(0) skewX(10deg);
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, desktop)){
+    #banner .wrap{
+        margin-top: 2.5rem;
+    }
+
+    .m-banner-rmbx{
+        justify-content: center;
+        margin: 8rem 0 4rem 0;
+    }
+
+    .m-banner-rmbx::after{
+        bottom: -0.1rem;
+        right: -2.8rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .m-banner-rmbx span i{
+        font-size: 12.5rem;
+    }
+
+    .m-banner-rmbx span i:last-child{
+        transform: translate3d(0, 5rem, 0) scaleY(0) skewX(-20deg);
+    }
+
+    .m-banner-rmbx:hover span i:first-child{
+        transform: translate3d(0, -7rem, 0) scaleY(0) skewX(10deg);
+    }
+}

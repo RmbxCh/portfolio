@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlotte Rambeaux - Portfolio</title>
+    <meta name="description" content="Bienvenue sur le portfolio de Charlotte Rambeaux! Etudiante en dernière année de BES Webdevelopment à l'Institut Saint-Laurent de Liège, je suis à la recherche d'un stage.">
+    <meta name="keywords" content="Charlotte Rambeaux, webdeveloper, webdevelopment, portfolio">
+
+    <link rel="stylesheet" href="css/screen.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+<body>
+    <div id="to-top"></div>
+    <header class="l-header-main">
+        <div class="l-main-nav-ham">
+            <div class="l-main-nav-line"></div>
+            <div class="l-main-nav-line"></div>
+            <div class="l-main-nav-line"></div>
+        </div>
+        <nav>
+            <ul class="l-main-nav">
+                <li><a href="#to-top" data-item="home">Home</a></li>
+                <li><a href="#about" data-item="about">About</a></li>
+                <li><a href="#portfolio" data-item="portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-item="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="banner">
+            <div class="wrap">
+                <div class="m-banner-rmbx">
+                    <span>
+                        <i>R</i>
+                        <i>R</i>
+                    </span>
+                    <span>
+                        <i>M</i>
+                        <i>M</i>
+                    </span>
+                    <span>
+                        <i>B</i>
+                        <i>B</i>
+                    </span>
+                    <span>
+                        <i>X</i>
+                        <i>X</i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <section id="about">
+            <div class="wrap">
+                <div class="m-about-container">
+                    <div class="m-about-description">
+                        <h1>Charlotte Rambeaux</h1>
+                        <p>Webdeveloper junior basée à Liège, en dernière année de BES en Webdevelopment à l'Institut Saint-Laurent.</p>
+                        <p>Attirée par le développement front-end, mon objectif à terme est de travailler dans une agence web.</p>
+                        <p class="toggleShow"><i class="far fa-plus-square"></i>de détails</p>
+                        <div class="m-about-description-more">
+                            <p>Après un master en Histoire et un début de carrière dans un domaine très différent, j’ai décidé de me lancer dans le vaste monde du webdevelopment. Le projet me trottait en tête depuis quelques années et j’ai finalement eu l’opportunité d’entamer des études en cours du soir en 2019.
+                            </p>
+                            <p>D’un naturel curieux, je cherche en permanence à améliorer et approfondir mes compétences.</p>
+                        </div>
+                        <div class="m-about-cta">
+                            <a class="l-btn-cta" href="#contact">Me contacter</a>
+                            <a class="l-btn-cta-alt" href="./ressources/rambeaux_CV.pdf" target="_blank">Mon CV</a>
+                        </div>
+                    </div>
+                    <div class="m-about-picture"></div>
+                </div>
+                <div class="m-about-skills">
+                    <h2>Compétences</h2>
+                    <div class="m-about-skills-container">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-sass"></i>
+                        <i class="fab fa-js-square"></i>
+                        <img src="img/logoJQ.png" alt="logo jQuery">
+                        <i class="fab fa-git-square"></i>
+                        <i class="fab fa-php"></i>
+                        <img src="img/logoMysql.png" alt="log MySQL">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="l-parallax"></div>
+        <section id="portfolio">
+            <div class="wrap">
+                <h1>Portfolio</h1>
+                <div class="m-portfolio-container">
+                    <div class="m-portfolio-card">
+                        <div class="m-portfolio-card-back">
+                            <h2>Kreo</h2>
+                            <p>Projet réalisé dans le cadre du cours de "création de sites statiques" en 1ere année.</p>
+                            <p>Clone d'un template one-page construit à partir de captures d'écran du résultat attendu. Les icones viennent de <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a>.</p>
+                            <p>HTML et SCSS</p>
+                            <p>Responsive et mobile-first</p>
+                            <div class="m-portfolio-card-demo">
+                                <a href="./projet_kreo/index.html" target="_blank"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/RmbxCh/projet_kreo" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="m-portfolio-card-front card-kreo">
+                            <i class="fas fa-hand-point-up"></i>
+                        </div>
+                        <div class="m-portfolio-card-bottom">
+                            <a href="./projet_kreo/index.html" target="_blank"><i class="fas fa-globe"></i>aperçu</a>
+                            <a href="https://github.com/RmbxCh/projet_kreo" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>code</a>
+                        </div>
+                    </div>
+                    <div class="m-portfolio-card">
+                        <div class="m-portfolio-card-back">
+                            <h2>ISL-web</h2>
+                            <p>Projet adapté de l'examen du cours de "création de sites statiques" de 1ere année.</p>
+                            <p>Clone d'un template multipages construit à partir de captures d'écran du résultat attendu. Les icones viennent de <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a> et de <a href="https://linearicons.com/free" target="_blank" rel="noopener noreferrer">Linear Icons</a>.</p>
+                            <p>HTML et SCSS</p>
+                            <p>Responsive et mobile-first</p>
+                            <div class="m-portfolio-card-demo">
+                                <a href="./projet_islWeb/index.html" target="_blank"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/RmbxCh/projet_islWeb" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="m-portfolio-card-front card-isl">
+                            <i class="fas fa-hand-point-up"></i>
+                        </div>
+                        <div class="m-portfolio-card-bottom">
+                            <a href="./projet_islWeb/index.html" target="_blank" rel="noopener"><i class="fas fa-globe"></i>aperçu</a>
+                            <a href="https://github.com/RmbxCh/projet_islWeb" target="_blank" rel="noopener"><i class="fab fa-github"></i>code</a>
+                        </div>
+                    </div>
+                    <div class="m-portfolio-card">
+                        <div class="m-portfolio-card-back">
+                            <h2>bulaFIT</h2>
+                            <p>Site vitrine conçu pour un centre de santé et de sport basé à Louveigné en province de Liège.</p>
+                            <p>Design imaginé de A à Z avec comme base le logo de l'entreprise réalisé par une graphiste. Les icones viennent de <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a>.</p>
+                            <p>Le site constituera mon travail de fin d'études et est donc amené à évoluer, pour devenir plus dynamique.</p>
+                            <div class="m-portfolio-card-demo">
+                                <a href="http://www.bulafit.be" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
+                                <a href="https://github.com/RmbxCh/bulafit" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="m-portfolio-card-front card-bulafit">
+                            <i class="fas fa-hand-point-up"></i>
+                        </div>
+                        <div class="m-portfolio-card-bottom">
+                            <a href="http://www.bulafit.be" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i>site</a>
+                            <a href="https://github.com/RmbxCh/bulafit" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>code</a>
+                        </div>
+                    </div>
+                    <div class="m-portfolio-card">
+                        <div class="m-portfolio-card-back">
+                            <h2>Portfolio</h2>
+                            <p>HTML, SCSS, JS</p>
+                            <p>Responsive et mobile-first</p>
+                            <div class="m-portfolio-card-demo">
+                                <a href="https://github.com/RmbxCh/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="m-portfolio-card-front card-portfo">
+                            <i class="fas fa-hand-point-up"></i>
+                        </div>
+                        <div class="m-portfolio-card-bottom">
+                            <a href="https://github.com/RmbxCh/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrap">
+                <h1>Contact</h1>
+                <div class="m-contact-coord">
+                    <i class="fas fa-at"></i>
+                    <a href="mailto:charlotte@rambeaux.be">charlotte@rambeaux.be</a>
+                </div>
+                <div class="m-contact-coord">
+                    <i class="fas fa-mobile-alt"></i>
+                    <a href="tel:0032479737367">+32 (0)479 73 73 67</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="l-main-footer">
+        <div class="wrap">
+            <p>&copy; Charlotte Rambeaux &vert; 2022 &vert; All rights reserved</p>
+            <p>Icones : &copy; <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a></p>
+        </div>
+        <div class="nav-to-top">
+            <a href="#to-top"><i class="fas fa-angle-double-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

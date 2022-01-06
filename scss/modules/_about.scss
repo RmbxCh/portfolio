@@ -1,0 +1,186 @@
+/* Section ABOUT */
+#about{
+    padding: 2.5rem 1rem;
+    background-color: map-get($color-bg, second);
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.m-about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 2rem 0;
+}
+
+.m-about-description{
+    color: map-get($color-font, second);
+
+    h1{
+        margin-bottom: 1rem;
+        text-transform: none;
+        filter: none;
+    }
+
+    p{
+        margin: 0.5rem 0;
+        line-height: 1.6rem;
+    }
+}
+
+.toggleShow{
+    margin: 1rem 0;
+    padding-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+    i{
+        padding: 0 0.5rem;
+        color: map-get($color-font, details);
+    }
+}
+
+.m-about-description-more{
+    display: none;
+    margin: 0 1.5rem;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.m-about-cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.m-about-picture{
+    position: relative;
+    margin: 2.5rem auto;
+    width: 20rem;
+    max-width: 100%;
+    height: 20rem;
+    border-radius: 40% 60% 70% 30% / 57% 28% 72% 43%;
+    background-color: map-get($color-bg, main);
+    background-image: url('../img/photo_profil.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.m-about-picture::before{
+    content: '';
+    position: absolute;
+    left: -0.8rem;
+    width: 19.5rem;
+    height: 19.5rem;
+    background-color: none;
+    border: 1px solid map-get($color-bg, deco);
+    border-radius: 40% 60% 70% 30% / 57% 28% 72% 43%;
+}
+
+.m-about-picture::after{
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    left: -0.8rem;
+    width: 19.5rem;
+    height: 19.5rem;
+    background-color: none;
+    border: 1.8px dotted map-get($color-bg, deco);
+    border-radius: 40% 60% 70% 30% / 57% 28% 72% 43%;
+}
+
+.m-about-skills h2{
+    margin-bottom: 2rem;
+    color: map-get($color-font, second);
+    text-align: center;
+}
+
+.m-about-skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    i{
+        margin: 1rem 0.5rem;
+        color: map-get($color-font, second);
+        font-size: 3rem;
+    }
+
+    img{
+        width: 20%;
+        filter: brightness(0.1) invert(100%);
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, tab)){
+    .m-about-description{
+        margin: 0 2.5rem;
+    }
+
+    .m-about-picture::before{
+        left: 0.2rem;
+        width: 20.5rem;
+        height: 20.5rem;
+    }
+
+    .m-about-picture::after{
+        top: -0.75rem;
+        left: -0.2rem;
+        width: 20.5rem;
+        height: 20.5rem;
+    }
+
+    .m-about-skills-container{
+        flex-direction: row;
+
+        img{
+            margin: 1rem 0.5rem;
+            width: 8%;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, desktop)){
+    .m-about-container{
+        flex-direction: row;
+    }
+
+    .m-about-description{
+        align-self: center;
+    }
+
+    .m-about-picture{
+        flex-shrink: 0;
+        max-width: none;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .m-about-picture::before{
+        left: 0.2rem;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .m-about-picture::after{
+        top: -0.75rem;
+        left: -0.2rem;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .m-about-skills-container{
+        justify-content: center;
+
+        i{
+            margin: 0.7rem 1.5rem;
+        }
+    
+        img{
+            margin: 0.7rem 1.5rem;
+            width: 6%;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/* boutons CTA */
+.l-btn-cta{
+    margin: 0.5rem;
+    padding: 1rem;
+    min-width: 40%;
+    background-color: map-get($color-bg, deco);
+    border-radius: 999rem;
+    color: map-get($color-font, second);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    
+    &:hover{
+        box-shadow: 0 0 1rem rgba(241, 241, 241, 0.2);
+    }
+}
+
+.l-btn-cta-alt{
+    margin: 0.5rem;
+    padding: 0.87rem;
+    min-width: 40%;
+    border: 0.13rem solid map-get($color-bg, deco);
+    border-radius: 999rem;
+    color: map-get($color-font, second);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover{
+        box-shadow: 0 0 1rem rgba(241, 241, 241, 0.2);
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, tab)){
+    .l-btn-cta{
+        padding: 1rem 0.5rem;
+        min-width: 25%;
+        font-size: 0.9rem;
+    }
+
+    .l-btn-cta-alt{
+        padding: 0.9rem 0.4rem;
+        min-width: 25%;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: map-get($breakpoint, tab)){
+    .l-btn-cta{
+        padding: 0.8rem 0.5rem;
+        min-width: 25%;
+        font-size: 1.2rem;
+    }
+
+    .l-btn-cta-alt{
+        padding: 0.7rem 0.4rem;
+        min-width: 25%;
+        font-size: 1.2rem;
+    }
+}
